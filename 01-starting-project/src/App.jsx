@@ -1,5 +1,5 @@
 import logoReact from "./assets/react-core-concepts.png";
-import componentsImg from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data.js";
 
 const description = ["Fundamental", "Core", "Crucial", "Essential"];
 
@@ -40,21 +40,16 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            <CoreConcepts
-              image={componentsImg}
-              title="Components"
-              description="The Core UI Building Block."
-            />
-            <CoreConcepts
-              image={componentsImg}
-              title="Components"
-              description="The Core UI Building Block."
-            />
-            <CoreConcepts
-              image={componentsImg}
-              title="Components"
-              description="The Core UI Building Block."
-            />
+            {CORE_CONCEPTS.map((concept, index) => {
+              return (
+                <CoreConcepts
+                  key={index}
+                  image={concept.image}
+                  title={concept.title}
+                  description={concept.description}
+                />
+              );
+            })}
           </ul>
         </section>
       </main>
