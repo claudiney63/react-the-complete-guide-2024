@@ -1,4 +1,5 @@
-import logoReact from "../assets/react-core-concepts.png";
+import logoReact from "../../assets/react-core-concepts.png";
+import "../Header/Header.css";
 
 const description = ["Fundamental", "Core", "Crucial", "Essential"];
 
