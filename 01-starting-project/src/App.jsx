@@ -1,15 +1,6 @@
 import { CORE_CONCEPTS } from "./data.js";
 import HeaderComponent from "./components/Header.jsx";
-
-function CoreConcepts(props) {
-  return (
-    <li>
-      <img src={props.image} alt={props.title}></img>
-      <h3>{props.title}</h3>
-      <p>{props.description}</p>
-    </li>
-  );
-}
+import CoreConcepts from "./components/CoreConcepts.jsx";
 
 function App() {
   return (
