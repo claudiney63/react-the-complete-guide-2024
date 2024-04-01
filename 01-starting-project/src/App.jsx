@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { CORE_CONCEPTS } from "./data.js";
+import { CORE_CONCEPTS, EXAMPLES } from "./data.js";
 import HeaderComponent from "./components/Header/Header.jsx";
 import CoreConcepts from "./components/CoreConcepts.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-
-  const [selectedTab, setSelectedTab] = useState('components');
+  const [selectedTab, setSelectedTab] = useState("components");
 
   function handleSelect(selectedTab) {
     setSelectedTab(selectedTab);
@@ -34,12 +33,20 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-            <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-            <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-            <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
+            <TabButton onSelect={() => handleSelect("components")}>
+              Components
+            </TabButton>
+            <TabButton onSelect={() => handleSelect("jsx")}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          <p>{selectedTab}</p>
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTab].title}</h3>
+            <p>{EXAMPLES[selectedTab].description}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTab].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
