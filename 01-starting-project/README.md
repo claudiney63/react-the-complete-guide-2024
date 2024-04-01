@@ -109,4 +109,6 @@ function Contador() {
 export default Contador;
 ```
 
+![alt text](image.png)
+
 Para mais informações detalhadas, consulte a documentação oficial do [React](https://reactjs.org/).
