@@ -5,7 +5,7 @@ import CoreConcepts from "./components/CoreConcepts.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  const [selectedTab, setSelectedTab] = useState("components");
+  const [selectedTab, setSelectedTab] = useState("");
 
   function handleSelect(selectedTab) {
     setSelectedTab(selectedTab);
@@ -41,11 +41,16 @@ function App() {
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
           <div id="tab-content">
-            <h3>{EXAMPLES[selectedTab].title}</h3>
-            <p>{EXAMPLES[selectedTab].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTab].code}</code>
-            </pre>
+            {selectedTab && (
+              <>
+                <h3>{EXAMPLES[selectedTab].title}</h3>
+                <p>{EXAMPLES[selectedTab].description}</p>
+                <pre>
+                  <code>{EXAMPLES[selectedTab].code}</code>
+                </pre>
+              </>
+            )}
+            <p>Please select a topic!</p>
           </div>
         </section>
       </main>
