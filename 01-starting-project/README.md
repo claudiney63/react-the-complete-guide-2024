@@ -111,4 +111,6 @@ export default Contador;
 
 ![alt text](image.png)
 
+Visualize melhor todos esses topicos na pratica acessando: [01-starting-project](https://01-starting-project-jqfs8zu4y-claudiney63s-projects.vercel.app)
+
 Para mais informações detalhadas, consulte a documentação oficial do [React](https://reactjs.org/).
