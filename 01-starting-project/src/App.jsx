@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <HeaderComponent />
       <main>
         <section id="core-concepts">
@@ -72,7 +72,7 @@ function App() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
