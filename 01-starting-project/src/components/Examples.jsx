@@ -14,6 +14,7 @@ export default function Examples() {
   return (
     <Section title={"Examples"} id="examples">
       <Tabs
+      ButtonsContainer={'menu'}
         buttons={
           <>
             <TabButton
@@ -53,7 +54,7 @@ export default function Examples() {
               </pre>
             </>
           )}
-          <p>Please select a topic!</p>
+          {!selectedTab && <p>Please select a topic!</p>}
         </div>
       </Tabs>
     </Section>
